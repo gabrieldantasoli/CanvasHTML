@@ -1,6 +1,6 @@
 // Start Header events/interations
 var btnnavbar = document.querySelector('#btnnavbar') ;
-var nav = document.querySelector('nav') ;
+var nav = document.querySelector('#navbar') ;
 
 function changeNavbar() {
     document.querySelector('body').classList.toggle('active') ;
@@ -28,3 +28,4 @@ document.querySelectorAll('#navbar a').forEach(item => item.addEventListener('cl
 
 btnnavbar.addEventListener('click',changeNavbar) ;
 // Ends Header events/interations
+

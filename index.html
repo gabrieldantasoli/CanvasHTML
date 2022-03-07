@@ -14,21 +14,66 @@
     <header id="header">
         <h2><i class="fas fa-shapes"></i>Canvas</h2>
         <nav id="navbar">
+            <a href="#canvas"><div></div>Canvas</a>
+            <a href="#basico"><div></div>Básico</a>
             <a href="#"><div></div>empty</a>
             <a href="#"><div></div>empty</a>
             <a href="#"><div></div>empty</a>
             <a href="#"><div></div>empty</a>
-            <a href="#"><div></div>empty</a>
-            <a href="#"><div></div>empty</a>
-            
+                                                                     
             
         </nav>
         <div class="fas fa-bars" id="btnnavbar"></div>
     </header>
 
+    <section id="canvas">
+        <h1>Canvas</h1>
+        <h2>O que é ?</h2>
+        <p>A tag <span class="orange">canvas</span> é usada para desenhar (renderização) de elementos , normalmente gráficos . Para tal usa-se uma linguaguem de script como , por exemplo , Javascript .</p>
+        <p>Antes de tudo , você deve criar o elemento <span class="orange">canvas</span> usanso a tag HTML <span class="orange">&lt;canvas&gt;&lt;/canvas&gt;</span> . Após isso , selecione o canvas criado através do Javascript usando <span class="blue">getElementById</span> ou <span class="blue">quesrySelector</span> e passe o contexto para "2D" .</p>
+        <p><span class="blue">Veja o exemplo :</span></p>
+        <div class="codigo">
+            <p><span class="purple">var</span> canvas = <span class="purple">document</span>.<span class="green">getElementById</span>('canvas') ;</p>
+            <p><span class="purple">var</span> ctx = <span class="purple">canvas</span>.<span class="green">getContext</span>('2d') ;</p>
+        </div>
+        <p>Após isso , você ja pode começar a usar o canvas livremente .</p>
+    </section>
 
-
-
+    <section id="basico">
+        <h1>Básico de canvas</h1>
+        <h2>fillStyle</h2>
+        <p>O <span class="orange">fillStyle</span> define a cor que será usada para 'desenhar' determinados elementos . Para modificar a cor que será usada , você pode fazer :</p>
+        <div class="codigo">
+            <p><span class="purple">ctx</span>.<span class="green">fillStyle</span> = '#codigo haxadecimal de cor'</p>
+        </div>
+        <p><span class="orange">OU</span></p>
+        <div class="codigo">
+            <p><span class="purple">ctx</span>.<span class="green">fillStyle</span> = 'rgb(red, green, blue)'</p>
+        </div>
+        <h2>fill</h2>
+        <p>O elemento <span class="orange">fill</span> , basicamente , colore os elementos desenhados . veja o exemplo :</p>
+        <div class="codigo">
+            <p><span class="purple">ctx</span>.<span class="green">fill</span>()</p>
+        </div>
+        <h2>rect e fillRect</h2>
+        <p>Os elementos <span class="orange">rect</span> e <span class="orange">fillRect</span> , ambos, desenham retângulos , mas a diferença entre eles é que o <span class="orange">rect</span> apenas desenha o retângulo , sem colorir . Já o <span class="orange">fillRect</span> desenha e dá cor ao retângulo .</p>
+        <p>Usando <span class="orange">rect</span> :</p>
+        <div class="codigo">
+            <p><span class="purple">ctx</span>.<span class="green">fillStyle</span> = '#000' ;</p>
+            <p><span class="purple">ctx</span>.<span class="green">rect</span>(Xinicial,Yinicial,Xfinal,Yinicial) ;</p>
+            <p><span class="purple">ctx</span>.<span class="green">fill</span>() ;</p>
+        </div>
+        <p>Usando <span class="orange">fillRect</span> :</p>
+        <div class="codigo">
+            <p><span class="purple">ctx</span>.<span class="green">fillStyle</span> = '#000' ;</p>
+            <p><span class="purple">ctx</span>.<span class="green">fillRect</span>(Xinicial,Yinicial,Xfinal,Yinicial) ;</p>
+        </div>
+        <h2>clearRect</h2>
+        <p>O elemento <span class="orange">clearRect</span> , basicamente , "apaga" uma área desenhada . A área que será apagada é em forma de retângulo e também precisa de 4 parâmetros. veja o exemplo :</p>
+        <div class="codigo">
+            <p><span class="purple">ctx</span>.<span class="green">clearRect</span>(Xinicial,Yinicial,Xfinal,Yinicial)</p>
+        </div>
+    </section>
 
     <script src="script/script.js"></script>
 </body>
